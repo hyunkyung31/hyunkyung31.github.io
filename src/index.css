@@ -1,0 +1,132 @@
+/* ===============
+01. Global Reset
+===================*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+/*========================
+02. Design tokens - Light
+==========================*/
+
+:root {
+  color-scheme: light;
+
+  /* Font */
+  --font-body: "Pretendard", "Malgun Gothic", sans-serif;
+  --font-display: "DM Serif Display", Georgia, serif;
+
+  /* Bacgroud */
+  --color-bg: #F5F1E8;
+  --color-surface: #FFFFFF;
+  --color-surface-soft: #FAF8F3;
+
+  /* Brand */
+  --color-sage: #D8E2D2;
+  --color-primary: #354B40;
+  --color-accent: #BC674A;
+
+  /* Text */
+  --color-text: #292D29;
+  --color-text-muted: #626D63;
+
+  /* Border */
+  --color-border: #D8D6CC;
+
+  /* Layout */
+  --content-width: 1200px;
+
+  --font-signature: "Allura", cursive;
+
+  /* active navigation*/
+  --color-nav-active: #D1DEC9;
+
+  /* Hero Profile Background */
+  --color-hero-arch: #CEDBC8;
+}
+
+/* ================================
+03. Design Tokens - Dark
+================================== */
+
+:root[data-theme="dark"] {
+  color-scheme: dart;
+
+  --color-bg: #1D2420;
+  --color-surface: #29332D;
+  --color-surface-soft: #242C27;
+
+  --color-sage: #405648;
+  --color-primary: #C0D6C2;
+  --color-accent: #E0A083;
+
+  --color-text: #F3F0E8;
+  --color-text-muted: #B4BDB4;
+  --color-border: #465349;
+
+  /*active navigation - Dark*/
+  --color-nav-active: #405648;
+
+  /* Hero Profile Background - Dark */
+  --color-hero-arch: #405648;
+
+}
+
+/* ===================================
+04. Base Styles
+===================================== */
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a { 
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* 영문 강조 제목 전용 */
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+/* 텍스트 선택 색상 */
+::selection {
+  background-color: var(--color-sage);
+  color: var(--color-text);
+}
+
+/*=========================
+05. Accessibility
+==========================*/
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
