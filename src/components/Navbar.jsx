@@ -12,7 +12,7 @@ function Navbar() {
     }, [theme]);
 
     useEffect(() => {
-        const sections = ["home", "projects", "experiments", "about"];
+        const sections = ["home", "projects", "experiments", "notes", "about"];
 
         const updateActiveSection = () => {
             const scrollPosition = window.scrollY + 180;
@@ -78,6 +78,13 @@ function Navbar() {
                     className={activeSection === "experiments" ? "active" : ""}
                     >
                         Lab
+                </a>
+
+                <a
+                    href="#notes"
+                    className={activeSection === "notes" ? "active" : ""}
+                >
+                    Journal
                 </a>
 
                 <a 

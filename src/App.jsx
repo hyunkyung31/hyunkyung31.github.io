@@ -7,6 +7,7 @@ import ExperimentCard from './components/ExperimentCard';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import LatestNotes from './components/LatestNotes';
 
 function App() {
 
@@ -147,7 +148,10 @@ const otherProjects = projects.filter(
               />
             ))}
           </div>
-      </section> 
+      </section>
+      
+      <LatestNotes />
+
       <About />   
       <Contact />
       <Footer />

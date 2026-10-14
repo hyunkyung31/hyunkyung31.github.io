@@ -407,8 +407,13 @@
     grid-row: 2;
 
     justify-content: center;
-    gap: 20px;
-    padding: 10px 12px;
+    gap: 2px;
+    padding: 5px;
+  }
+
+  .nav-menu a {
+    padding: 8px 10px;
+    font-size: 12px
   }
 
   .theme-toggle {
@@ -963,6 +968,154 @@
 #home,
 #projects,
 #experiments,
+#notes,
 #about {
   scroll-margin-top: 100px;
+}
+
+/* ========================
+  Latest Notes Section
+=========================*/
+
+.latest-notes {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 80px 32px;
+}
+
+.notes-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.notes-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--color-accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.note-heading h2 {
+  margin: 0 0 12px;
+  font-size: 32px;
+}
+
+.notes-heading p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.notes-all-link {
+  flex-shrink: 0;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.note-list {
+  border-top: 1px solid var(--color-border);
+}
+
+.note-item {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr) 110px 24px;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 12px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.note-item:hover {
+  background-color: var(--color-surface-soft);
+}
+
+.note-numver {
+  color: var(--color-accent);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.note-content {
+  min-width: 0;
+}
+
+.note-category {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-accent);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.note-content h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+.note-date {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.note-arrow {
+  color: var(--color-primary);
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+.note-item:hover .note-arrow {
+  transform: translate(3px, -3px);
+}
+
+@media (max-width: 768px) {
+  .latest-notes{
+    padding: 56px 20px;
+  }
+
+  .notes-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .note-item {
+    grid-template-columns: 30px minmax(0, 1fr) 20px;
+    gap: 12px;
+    padding: 22px 4px;
+  }
+
+  .note-date {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left;
+  }
+
+  .note-arrow {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .note-content h3 {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .note-item,
+  .note-arrow {
+    transition: none;
+  }
 }
