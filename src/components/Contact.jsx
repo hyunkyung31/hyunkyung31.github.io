@@ -28,6 +28,11 @@ function Contact() {
                     >
                         Tech Blog ↗
                     </a>
+
+                    <a
+                        href="mailto:piehyun31@gmail.com">
+                            Email ↗
+                        </a>
                 </div>
             </div>
         </section>
