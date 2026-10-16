@@ -36,19 +36,20 @@ const otherProjects = projects.filter(
             </span>
 
             <h1 className="hero-title">
-              관찰하고, 분석하고,
+              현장의 경험을,
               <br />
-              <span>직접 구현합니다.</span>
+              <span>코드로 이어나갑니다.</span>
             </h1>
 
             <p className="hero-name">
-              황현경 <span>. Data & AI Developer</span>
+              황현경 <span>. AI / Data / Web Development</span>
             </p>
 
             <p className="hero-description">
-              데이터 분석과 모델 검증부터
-              실제 서비스 개발까지,
-              직접 고민하고 구현한 과정을 기록합니다.
+              응급의료와 임상연구 현장에서 일하며
+              데이터를 더 잘 활용할 방법을 고민했습니다.
+              지금은 AI 모델 개발과 서빙,
+              웹 서비스 구현을 프로젝트로 이어나가고 있습니다.
             </p>
             
             <div className="hero-buttons">

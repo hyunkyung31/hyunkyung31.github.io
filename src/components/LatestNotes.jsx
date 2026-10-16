@@ -69,9 +69,9 @@ function LatestNotes() {
                         rel="noopener nereferrer"
                         className="note-item"
                     >
-                        <sapn className="note-number">
+                        <span className="note-number">
                             {String(index + 1).padStart(2, "0")}
-                        </sapn>
+                        </span>
 
                         <div className="note-content">
                             <span className="category">

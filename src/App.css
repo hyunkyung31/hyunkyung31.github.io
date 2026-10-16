@@ -1119,3 +1119,704 @@
     transition: none;
   }
 }
+
+
+/* DUGN featured gallery */
+
+.dugn-gallery {
+    min-width: 0;
+}
+
+.dugn-gallery-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.dugn-gallery-tabs button {
+    border: 1px solid #e2e2db;
+    border-radius: 8px;
+    background: transparent;
+    padding: 8px 11px;
+    color: #626d61;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dugn-gallery-tabs button:hover {
+    background: #f1f4ed;
+}
+
+.dugn-gallery-tabs button.active {
+    background: #e5ebe0;
+    border-color: #a8b9a0;
+    color: #334c39;
+    font-weight: 600;
+}
+
+.dugn-gallery-preview {
+    width: 100%;
+    height: 290px;
+    border-radius: 12px;
+    background: #f3f5f2;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dugn-gallery-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.dugn-gallery-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 2px 0;
+}
+
+.dugn-gallery-count {
+    color: #879482;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+}
+
+.dugn-gallery-footer p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: #303b33;
+}
+
+.dugn-gallery-arrows {
+    display: flex;
+    gap: 6px;
+}
+
+.dugn-gallery-arrows button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #dedfd7;
+    border-radius: 50%;
+    background: transparent;
+    color: #3d5141;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.dugn-gallery-arrows button:hover {
+    background: #e5ebe0;
+}
+
+.dugn-gallery-note {
+    margin-top: 10px;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #8a9287;
+}
+
+.project-role {
+    margin: 24px 0;
+    padding: 16px 0;
+    border-top: 1px solid #e8e7df;
+    border-bottom: 1px solid #e8e7df;
+}
+
+.project-role strong {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+.project-role p {
+    margin: 7px 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+    .dugn-gallery-preview {
+        height: 230px;
+    }
+
+    .dugn-gallery-tabs button {
+        font-size: 11px;
+        padding: 7px 9px;
+    }
+}
+
+/* DUGN - image lightbox */
+
+/* 이미지 클릭 영역 */
+.dugn-preview-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.dugn-preview-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*마우스를 올리면 확대 안내 표시*/
+.dugn-zoom-label {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: rgba(30, 40, 35, 0.8);
+  color: #fff;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.dugn-preview-button:hover .dugn-zoom-label,
+.dugn-preview-button:focus-visible .dugn-zoom-label {
+  opacity: 1;
+}
+
+/* 화면 전체를 덮는 어두운 배경 */
+.dugn-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  background: rgba(15, 22, 25, 0.88);
+}
+
+/* 확대 이미지 컨테이너 */
+.dugn-lightbox-content {
+  width: 100%;
+  max-width: 1200px;
+  max-height: 95vh;
+  display: felx;
+  flex-direction: column;
+  gap: 14px;
+  border-radius: 16px;
+  background: #fff;
+  color: #28332b;
+  overflow: hidden;
+}
+
+/* 확대창 상단 */
+.dugn-lightbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dugn-lightbox-header > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dugn-lightbox-header strong {
+  font-size: 15px;
+}
+
+.dugn-lightbox-header span {
+  font-size: 12px;
+  color: #768176;
+}
+
+/* 확대된 이미지 */
+.dugn-lightbox-image {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  max-height: 75vh;
+  flex: 1;
+  object-fit: contain;
+}
+
+/* 확대창 하단 버튼 */
+.dugn-lightbox-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dugn-lightbox-controls span {
+  font-size: 12px;
+  color: #768176;
+}
+
+.dugn-lightbox-header button,
+.dugn-lightbox-controls button {
+  padding : 8px 14px;
+  border: 1px solid #dce2dc;
+  border-radius: 8px;
+  background: #f7f9f6;
+  color: #314735;
+  cursor: pointer;
+}
+
+.dugn-lightbox-header button:hover,
+.dugn-lightbox-controls button:hover {
+  background: #e5ebe0;
+}
+
+/* 모바일 대응 */
+@media (max-width: 600px) {
+  .dugn-lightbox {
+    padding: 10px
+  }
+
+  .dugn-lightbox-content {
+    padding: 12px;
+  }
+
+  .dugn-lightbox-contols span {
+    display: none
+  }
+}
+
+
+/* ==========================
+   About - Experience Layout
+========================== */
+
+.about-lead {
+    max-width: 760px;
+    margin: 24px 0 0;
+    color: var(--color-text-muted);
+    font-size: 16px;
+    line-height: 1.9;
+    word-break: keep-all;
+}
+
+/* 경력 요약 */
+.about-summary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 76px;
+}
+
+.about-summary-item {
+    padding: 28px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--color-surface);
+}
+
+.about-summary-item > span {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--color-accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.about-summary-item strong {
+    display: block;
+    font-size: 28px;
+    color: var(--color-primary);
+}
+
+.about-summary-item p {
+    margin: 8px 0 0;
+    color: var(--color-text-muted);
+    font-size: 13px;
+}
+
+/* 각 영역 */
+.about-section {
+    margin-top: 72px;
+}
+
+.about-section-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.about-section-heading > span {
+    color: var(--color-accent);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.about-section-heading h3 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.about-section-description {
+    margin: 0 0 30px;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+/* 개발 및 교육 */
+.about-development {
+    padding: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--color-surface);
+}
+
+.about-date {
+    color: var(--color-accent);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.about-development h4 {
+    margin: 10px 0 6px;
+    font-size: 20px;
+}
+
+.about-development > p:not(.about-subtitle) {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+}
+
+.about-subtitle {
+    margin: 0 0 18px;
+    color: var(--color-text-muted);
+    font-size: 14px;
+}
+
+.about-project-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.about-project-highlights > div {
+    padding: 18px;
+    border-radius: 10px;
+    background: var(--color-surface-soft);
+    border: 1px solid var(--color-border);
+}
+
+.about-project-highlights strong {
+    color: var(--color-primary);
+    font-size: 14px;
+}
+
+.about-project-highlights p {
+    margin: 10px 0 0;
+    color: var(--color-text-muted);
+    font-size: 13px;
+    line-height: 1.7;
+    word-break: keep-all;
+}
+
+/* 경력 타임라인 */
+.about-timeline {
+    border-top: 1px solid var(--color-border);
+}
+
+.about-career {
+    display: grid;
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 32px;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.about-career-date span,
+.about-career-date strong {
+    display: block;
+}
+
+.about-career-date span {
+    font-size: 13px;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.about-career-date strong {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--color-text-muted);
+}
+
+.about-career-content h4 {
+    margin: 0 0 6px;
+    font-size: 20px;
+}
+
+.about-career-content ul {
+    margin: 16px 0;
+    padding-left: 20px;
+    color: var(--color-text-muted);
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+.about-achievement {
+    margin: 14px 0 0;
+    padding: 12px 14px;
+    border-left: 3px solid var(--color-primary);
+    background: var(--color-surface-soft);
+    color: var(--color-text);
+    font-size: 13px;
+}
+
+/* 학력, 자격증, 수상 */
+.about-credentials {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.about-credential-card {
+    padding: 26px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--color-surface);
+}
+
+.about-credential-card h4 {
+    margin: 0 0 22px;
+    color: var(--color-primary);
+    font-size: 18px;
+}
+
+.about-credential-item + .about-credential-item {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+}
+
+.about-credential-item strong {
+    display: block;
+    font-size: 14px;
+}
+
+.about-credential-item span {
+    display: block;
+    margin-top: 6px;
+    color: var(--color-text-muted);
+    font-size: 12px;
+}
+
+.about-credential-item p {
+    margin: 8px 0 0;
+    color: var(--color-text-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.about-awards {
+    grid-column: 1 / -1;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .about-summary,
+    .about-project-highlights,
+    .about-credentials {
+        grid-template-columns: 1fr;
+    }
+
+    .about-summary {
+        margin-bottom: 48px;
+    }
+
+    .about-section {
+        margin-top: 52px;
+    }
+
+    .about-development,
+    .about-credential-card {
+        padding: 20px;
+    }
+
+    .about-career {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .about-awards {
+        grid-column: auto;
+    }
+}
+
+
+/* ==========================
+   Mobile Layout Refinement
+========================== */
+
+@media (max-width: 600px) {
+
+    /* HERO */
+    .hero {
+        padding: 36px 20px 24px;
+    }
+
+    .hero-title {
+        font-size: clamp(30px, 8vw, 36px);
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        line-height: 1.85;
+    }
+
+    .hero-buttons {
+        margin-top: 26px;
+    }
+
+    .hero-visual {
+        max-width: 290px;
+    }
+
+    /* ABOUT */
+    .about-heading {
+        margin-bottom: 28px;
+    }
+
+    .about-heading h2 {
+        font-size: 25px;
+        line-height: 1.45;
+    }
+
+    .about-lead {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .about-summary {
+        gap: 12px;
+        margin-bottom: 36px;
+    }
+
+    .about-summary-item {
+        padding: 18px 20px;
+        border-radius: 10px;
+    }
+
+    .about-summary-item > span {
+        margin-bottom: 8px;
+        font-size: 11px;
+    }
+
+    .about-summary-item strong {
+        font-size: 24px;
+    }
+
+    .about-summary-item p {
+        margin-top: 4px;
+        font-size: 12px;
+    }
+
+    /* EXPERIENCE */
+    .about-section {
+        margin-top: 44px;
+    }
+
+    .about-section-heading h3 {
+        font-size: 22px;
+    }
+
+    .about-career {
+        padding: 24px 0;
+    }
+
+    /* LAB */
+    .experiments-heading {
+        margin-bottom: 32px;
+    }
+
+    .experiment-card {
+        padding: 28px 0;
+    }
+
+    /* CONTACT */
+    .contact {
+        padding: 52px 20px;
+    }
+
+    .contact h2 {
+        font-size: 22px;
+        line-height: 1.5;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+    }
+
+    .contact p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+
+
+/* =========================
+   Lab Experiment Images
+========================= */
+
+.experiment-cover {
+  margin: 0 0 28px 68px;
+  max-width: 760px;
+}
+
+.experiment-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.experiment-cover figcaption {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.metric-note {
+  font-size: 11px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .experiment-cover {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .experiment-cover img {
+    border-radius: 8px;
+  }
+
+  .metric-item strong {
+    font-size: 24px;
+  }
+}

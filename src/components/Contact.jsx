@@ -4,7 +4,7 @@ function Contact() {
             <div className="contact-content">
                 <span className="contact-label">CONTACT</span>
 
-                <h2>함께 문제를 해결할 기회를 기다립니다.</h2>
+                <h2>함께할 기회를 찾고 있습니다.</h2>
 
                 <p>
                     데이터 분석과 AI 모델 개발,

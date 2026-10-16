@@ -8,11 +8,11 @@ export const projects = [
         description :
             "임상 데이터와 의료영상을 활용한 AI 분석 결과를 의료진의 진료 업무와 연결하는 통합 시스템입니다.",
         role : [
-            "React 기반 의료진 웹 개발",
-            "워크스테이션 및 주요 업무 기능 구현",
-            "Clinical ML 모델 개발 및 연동",
+            "Clinical AI · 2D XCA · 3D CCTA 모델 서빙 전담",
+            "Clinical AI 머신러닝 모델 개발 및 서비스 연동",
+            "React 기반 의료진 워크스테이션 및 주요 업무 화면 구성",
+            "SHAP 기반 예측 변수 기여도 시각화",
             "데이터베이스 설계 참여",
-            "AI 모델 서빙",
         ],
         techStack : [
             "React",
@@ -23,8 +23,52 @@ export const projects = [
             "Machine Learning",
         ],
         github : "https://github.com/hyunkyung31/final_clinician-web",
+
         featured: true,
+
+        image: "/images/projects/dugn-main.png",
+
+        
+        gallery: [
+            {
+                title: "의료진 대시보드",
+                image: "/images/projects/dugn-main.png",
+            },
+            {
+                title: "Clinical AI 분석",
+                image: "/images/projects/dugn-clinical.png",
+            },
+            {
+                title: "SHAP 변수 기여도",
+                image: "/images/projects/dugn-shap.png",
+            },
+            {
+                title: "혈액검사 추적관찰",
+                image: "/images/projects/dugn-lab.png",
+            },
+            {
+                title: "2D XCA 분석 결과",
+                image: "/images/projects/dugn-xca.png",
+            },
+            {
+                title: "2D XCA 의심 영역",
+                image: "/images/projects/dugn-xca-frame.png",
+            },
+            {
+                title: "3D CCTA 렌더링",
+                image: "/images/projects/dugn-ccta.png",
+            },
+            {
+                title: "3D CCTA 결과보고서",
+                image: "/images/projects/dugn-ccta-report.png",
+            },
+        ],
+
+
+        imageNote:
+            "기존 시연 화면을 바탕으로 재구성한 포트폴리오 이미지입니다.",
     },
+
     {
         id : "eye-to-ai",
         title : "EYE TO AI",
