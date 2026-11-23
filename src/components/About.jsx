@@ -86,9 +86,9 @@ function About() {
                             <strong>DUGN (두근)</strong>
                             <p>
                                 임상 AI 모델 개발 및 FastAPI 추론 API 구현,
-                                Clinical AI·2D XCA·3D CCTA
-                                모델 서빙 전담,
-                                React 기반 의료진 웹 구현
+                                2D XCA AI 모델 개발·실험 및 성능 검증,
+                                React 의료진 웹 개발,
+                                Django API 연동 및 서비스 통합·배포
                             </p>
                         </div>
 
@@ -119,8 +119,8 @@ function About() {
                 </div>
 
                 <p className="about-section-description">
-                    응급의료 및 임상연구 분야에서 수행한
-                    업무와 경력입니다.
+                    한국공항공사에서 6년 4개월간 수행한
+                    응급의료, 교육훈련 및 협업 경험입니다.
                 </p>
 
                 <div className="about-timeline">
