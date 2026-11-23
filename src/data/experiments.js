@@ -26,7 +26,7 @@ export const experiments = [
             {
                 label: "CLAHE + Gamma · mAP50",
                 value: "0.330",
-                note: "YOLLOn · 동일 검증 데이터",
+                note: "YOLO11n · 동일 검증 데이터",
             },
         ],
 
@@ -35,7 +35,7 @@ export const experiments = [
         coverAlt: "YOLO11n 전처리별 탐지 성능 비교",
         coverNote: "YOLO11n 검증 데이터 기준 성능 비교",
 
-        techStack: ["Python", "Pytorch", "YOLO11", "OpenCV"],
+        techStack: ["Python", "PyTorch", "YOLO11", "OpenCV"],
 
         github:
             "https://github.com/hyunkyung31/xca-yolo-experiments",
@@ -80,8 +80,8 @@ export const experiments = [
         techStack:[
             "Python",
             "PyTorch",
-              "OpenCV",
-              "Scikit-learn",
+            "OpenCV",
+            "Scikit-learn",
             ],
         
         github:

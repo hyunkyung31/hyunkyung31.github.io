@@ -46,10 +46,10 @@ const otherProjects = projects.filter(
             </p>
 
             <p className="hero-description">
-              응급의료와 임상연구 현장에서 일하며
-              데이터를 더 잘 활용할 방법을 고민했습니다.
-              지금은 AI 모델 개발과 서빙,
-              웹 서비스 구현을 프로젝트로 이어나가고 있습니다.
+              응급의료 현장에서 협업과 문제 해결 경험을 쌓았습니다.
+              이후 Python 기반 데이터 처리와 AI 모델 개발을 학습하고,
+              React 웹서비스 개발과 API 연동, 배포까지
+              프로젝트를 통해 구현하며 개발 역량을 넓혔습니다.
             </p>
             
             <div className="hero-buttons">

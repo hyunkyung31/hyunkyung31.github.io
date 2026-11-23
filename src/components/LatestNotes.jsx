@@ -66,7 +66,7 @@ function LatestNotes() {
                         key={post.id}
                         href={post.url}
                         target="_blank"
-                        rel="noopener nereferrer"
+                        rel="noopener noreferrer"
                         className="note-item"
                     >
                         <span className="note-number">

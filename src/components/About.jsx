@@ -14,39 +14,6 @@ const careers = [
         achievement:
             "합동훈련 본사 우수사례 선정 · 2024년 표창 수상",
     },
-    {
-        company: "한국마사회",
-        position: "응급센터 · 응급구조사",
-        period: "2018.03 – 2018.08",
-        duration: "6개월",
-        tasks: [
-            "경마 경기 중 낙마 등 응급상황 발생 시 응급처치 및 병원 이송",
-            "안전사고 예방 교육 수행",
-        ],
-    },
-    {
-        company: "분당서울대학교병원",
-        position: "응급의학과 · 연구원",
-        period: "2016.10 – 2018.03",
-        duration: "1년 6개월",
-        tasks: [
-            "심정지 관련 임상연구 5건의 연구 자료 및 IRB 행정 관리",
-            "1,000건 이상 규모의 연구 대상자 정보 관리 및 추적조사",
-            "Excel 기반 연구 데이터 정리·보관",
-            "Case Study Meeting 준비 및 연구 진행 현황 발표",
-        ],
-        achievement: "임상연구 데이터 관리 및 연구 행정 경험",
-    },
-    {
-        company: "한마음의료재단 하나병원",
-        position: "심뇌혈관센터 · 응급구조사",
-        period: "2015.04 – 2015.09",
-        duration: "6개월",
-        tasks: [
-            "관상동맥조영술(CAG), TFCA 및 관련 시술 준비",
-            "의료기기 및 시술 물품 소독·관리",
-        ],
-    },
 ];
 
 function About() {
@@ -62,11 +29,11 @@ function About() {
                 </h2>
 
                 <p className="about-lead">
-                    응급의료 현장과 임상연구 업무를 경험하며
-                    데이터 관리와 정보 활용의 중요성을 느꼈습니다.
-                    이후 Python과 데이터 분석을 공부하기 시작했고,
-                    AI 모델 개발부터 모델 서빙,
-                    웹 서비스 구현까지 경험을 넓혀왔습니다.
+                    응급의료 현장에서 협업과 문제 해결 경험을 쌓았습니다.
+                    이후 Python과 SQL을 기반으로 데이터 분석과
+                    AI 모델 개발·서빙을 학습하고
+                    React 웹서비스 개발, API 연동 및 배포까지
+                    프로젝트를 통해 경험했습니다.
                 </p>
             </div>
 
@@ -80,8 +47,8 @@ function About() {
 
                 <div className="about-summary-item">
                     <span>PREVIOUS CAREER</span>
-                    <strong>8년 10개월</strong>
-                    <p>응급의료 · 임상연구 분야 직무 경력</p>
+                    <strong>6년 4개월</strong>
+                    <p>응급의료 분야 직무 경력</p>
                 </div>
             </div>
 
@@ -93,8 +60,8 @@ function About() {
                 </div>
 
                 <p className="about-section-description">
-                    개발 실무 경력과 구분되는 교육 및
-                    팀·개인 프로젝트 경험입니다.
+                    개발 실무 교육과 팀 프로젝트를 통해
+                    학습한 기술을 실제 기능으로 구현한 경험입니다.
                 </p>
 
                 <div className="about-development">
@@ -118,7 +85,7 @@ function About() {
                         <div>
                             <strong>DUGN (두근)</strong>
                             <p>
-                                Clinical AI 모델 개발,
+                                임상 AI 모델 개발 및 FastAPI 추론 API 구현,
                                 Clinical AI·2D XCA·3D CCTA
                                 모델 서빙 전담,
                                 React 기반 의료진 웹 구현
